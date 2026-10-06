@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#130A0D" />
   <meta name="description" content="Portfolio of Keerthana S, 5th year law student specialising in Business Law and Criminal Law." />
-  <title>Keerthana S — Chambers Portfolio</title>
+  <title>keerthanas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -75,8 +75,9 @@
     @keyframes draw { from { transform: scaleX(0); } }
     .sub { max-width: 36rem; color: var(--sand); font-size: 1.05rem; }
     .school { margin-top: .45rem; font-size: .9rem; color: rgba(212,216,162,.8); }
-    .meta { display: flex; flex-wrap: wrap; gap: .8rem 1.5rem; margin: 1.6rem 0 2rem; color: var(--sand); font-size: .9rem; }
+    .meta { display: flex; flex-direction: column; align-items: flex-start; gap: .65rem; margin: 1.4rem 0 1.6rem; color: var(--sand); font-size: .9rem; }
     .meta a:hover { color: var(--frappe); }
+    .hero-word.block { display: block; width: 100%; }
     .btns { display: flex; flex-wrap: wrap; gap: .7rem; }
     .btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.45rem; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; border-radius: 3px; transition: transform .2s, background .3s, border-color .3s; }
     .btn-p { background: var(--gold); color: var(--ink); box-shadow: 0 8px 28px rgba(166,117,66,.4); }
@@ -97,7 +98,7 @@
     .stat b { font-family: var(--display); font-size: 2rem; font-weight: 500; }
     .stat b i { font-style: normal; color: var(--gold); font-size: 1.1rem; }
     .stat span { display: block; margin-top: .35rem; font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--sand); }
-    section { position: relative; z-index: 1; padding: 4.6rem 0; }
+    section { position: relative; z-index: 1; padding: 3.2rem 0; }
     .label { color: var(--frappe); letter-spacing: .22em; text-transform: uppercase; font-size: .7rem; font-weight: 600; }
     h2 { font-family: var(--display); font-size: clamp(1.9rem, 4vw, 2.7rem); margin: .4rem 0 .6rem; font-weight: 600; }
     .lead { color: var(--sand); max-width: 36rem; margin-bottom: 2rem; }
@@ -147,7 +148,7 @@
       flex: 0 0 44px; height: 44px; border-radius: 999px; border: 1px solid rgba(166,117,66,.4);
       background: var(--tamarind); color: var(--gold); display: grid; place-items: center; font-style: normal;
     }
-    .contact { text-align: center; padding-bottom: 4rem; }
+    .contact { text-align: center; padding-bottom: 2.5rem; }
     .contact .lead { margin-left: auto; margin-right: auto; }
     .clinks { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 1.6rem; }
     .clinks a, .clinks span {
@@ -189,7 +190,7 @@
         <circle cx="11.5" cy="28" r="5" stroke="currentColor" stroke-width="1.5" fill="rgba(166,117,66,.25)"/>
         <circle cx="36.5" cy="28" r="5" stroke="currentColor" stroke-width="1.5" fill="rgba(166,117,66,.25)"/>
       </svg>
-      <span>Keerthana</span>
+      <span>keerthanas</span>
     </a>
     <button class="tog" id="tog" aria-label="Menu">☰</button>
     <div class="nav-links" id="links">
@@ -210,13 +211,13 @@
       <p class="eyebrow hero-word" style="animation-delay:80ms">5th Year Law Student · B.COM LLB (Hons)</p>
       <h1><span class="hero-word" style="animation-delay:180ms">Keerthana</span><span class="s hero-word" style="animation-delay:270ms">S</span></h1>
       <div class="rule"></div>
-      <p class="sub hero-word" style="animation-delay:420ms">Specialising in Business Law and Criminal Law. Rank holder · University Rank 5 · National Rank 3 in Commercial Law (SWAYAM) · Merit Scholar.</p>
-      <p class="school hero-word" style="animation-delay:520ms">Saveetha School of Law, Chennai</p>
-      <div class="meta hero-word" style="animation-delay:600ms">
+      <p class="sub hero-word block" style="animation-delay:420ms">Specialising in Business Law and Criminal Law. Rank holder · University Rank 5 · National Rank 3 in Commercial Law (SWAYAM) · Merit Scholar.</p>
+      <div class="meta hero-word block" style="animation-delay:560ms">
+        <span>Saveetha School of Law, Chennai</span>
         <a href="mailto:keerthanasampath92@gmail.com">keerthanasampath92@gmail.com</a>
         <span>Chennai, Tamil Nadu</span>
       </div>
-      <div class="btns hero-word" style="animation-delay:700ms">
+      <div class="btns hero-word block" style="animation-delay:700ms">
         <a class="btn btn-p" href="#experience">View Experience</a>
         <a class="btn btn-o" href="#contact">Get in Touch</a>
       </div>
@@ -262,7 +263,7 @@
       <button data-f="govt">Government / Policy</button>
     </div>
     <div class="tl" id="tl">
-      <article class="item reveal" data-c="corporate"><span class="when">August 2026 – Present</span><h3>Fox Mandal & Associates</h3><div class="role">Legal Intern</div><p class="loc">Chennai</p><ul><li>Researched regulatory compliance under FEMA, RERA and Insolvency & Bankruptcy Code frameworks, covering cross-border transactions and real estate regulatory filings.</li><li>Drafted memos on FEMA, RERA and IBC issues; gained exposure to regulatory and insolvency practice alongside core litigation research.</li></ul></article>
+      <article class="item reveal" data-c="corporate"><span class="when">August 2026</span><h3>Fox Mandal & Associates</h3><div class="role">Legal Intern</div><p class="loc">Chennai</p><ul><li>Researched regulatory compliance under FEMA, RERA and Insolvency & Bankruptcy Code frameworks, covering cross-border transactions and real estate regulatory filings.</li><li>Drafted memos on FEMA, RERA and IBC issues; gained exposure to regulatory and insolvency practice alongside core litigation research.</li></ul></article>
       <article class="item reveal" data-c="judicial"><span class="when">July 2026</span><h3>P Wilson Associates</h3><div class="role">Legal Intern</div><p class="loc">Chennai</p><ul><li>Assisted in research and drafting across corporate, civil, taxation, IP and criminal law — including case analysis, opinion drafting and pleadings for the Madras High Court.</li><li>Drafted parliamentary questions and briefing notes for the Senior Advocate’s work as a Member of Parliament on matters of public and legislative importance.</li></ul></article>
       <article class="item reveal" data-c="corporate"><span class="when">May 2026</span><h3>Ministry of Corporate Affairs — Registrar of Companies</h3><div class="role">Legal Intern</div><p class="loc">Chennai</p><ul><li>Assisted in drafting charge sheets, show-cause notices and enforcement documents under the Companies Act, 2013.</li><li>Researched corporate offences, penalties and adjudication mechanisms under the Act and Rules.</li></ul></article>
       <article class="item reveal" data-c="judicial"><span class="when">April 2026</span><h3>Chambers of Hon’ble Justice M. Dhandapani</h3><div class="role">Judicial Intern</div><p class="loc">Madras High Court</p><ul><li>Conducted research on civil and regulatory matters; distilled complex multi-party disputes into structured case briefs for judicial consideration.</li><li>Prepared detailed legal summaries and issue-wise analyses of pleadings and records under the demands of a judicial chambers environment.</li></ul></article>
@@ -280,7 +281,7 @@
     </div>
     <div class="edu">
       <article class="card reveal"><h3>Saveetha School of Law</h3><p class="kind">B.COM LLB (Hons) · 2022 – 2027 · Chennai</p><p style="margin-top:.8rem">Currently pursuing · CGPA 9.08 / 10.</p><p>Merit Scholarship · National Rank 3 in SWAYAM Commercial Law · University Rank 5</p></article>
-      <article class="card reveal"><h3>Chinmaya Vidyalaya</h3><p class="kind">Grade 12 — Commerce · 2022 · Chennai</p><p style="margin-top:.8rem">93%. A commerce foundation that continues to inform corporate and regulatory work.</p></article>
+      <article class="card reveal"><h3>Chinmaya Vidyalaya</h3><p class="kind">Grade 12 — Commerce with Entrepreneurship · 2022 · Chennai</p></article>
     </div>
     <div class="reveal" style="margin-top:2.5rem">
       <p class="label">National MOOCs</p>
