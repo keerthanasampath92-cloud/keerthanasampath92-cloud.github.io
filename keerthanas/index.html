@@ -255,13 +255,7 @@
     <div class="reveal">
       <p class="label">Professional journey</p>
       <h2>Experience</h2>
-      <p class="lead">Internships spanning corporate regulation, judicial chambers, government litigation and policy research.</p>
-    </div>
-    <div class="filters reveal" id="filters">
-      <button class="on" data-f="all">All</button>
-      <button data-f="corporate">Corporate / Regulatory</button>
-      <button data-f="judicial">Judicial / Litigation</button>
-      <button data-f="govt">Government / Policy</button>
+      <p class="lead">Internships across firms, chambers and government.</p>
     </div>
     <div class="tl" id="tl">
       <article class="item reveal" data-c="corporate"><span class="when">August 2026</span><h3>Fox Mandal & Associates</h3><div class="role">Legal Intern</div><p class="loc">Chennai</p><ul><li>Researched regulatory compliance under FEMA, RERA and Insolvency & Bankruptcy Code frameworks, covering cross-border transactions and real estate regulatory filings.</li><li>Drafted memos on FEMA, RERA and IBC issues; gained exposure to regulatory and insolvency practice alongside core litigation research.</li></ul></article>
@@ -304,6 +298,7 @@
       <a class="card reveal paper" href="https://doi.org/10.1109/AECTSD65988.2025.11410749" target="_blank" rel="noopener noreferrer"><p class="kind">Conference paper</p><h3>Representation Matters: Designing Fair and Inclusive AI Systems with Balanced Gender Diversity in Machine Learning Datasets</h3><p>AECTSD 2025 · DOI: 10.1109/AECTSD65988.2025.11410749</p><p class="open">Open paper →</p></a>
       <a class="card reveal paper" href="https://ijles.in/wp-content/uploads/2025/04/12.-Keerthana-S.pdf" target="_blank" rel="noopener noreferrer"><p class="kind">Journal article</p><h3>An Analysis of India’s Predominant Model of Left Wing Ideology: Dravidianism and Social Justice</h3><p>International Journal of Law Research, Education and Social Sciences · ISSN(O) 3048-7501</p><p class="open">Open paper →</p></a>
       <a class="card reveal paper" href="https://jlrjs.com/wp-content/uploads/2025/03/7.-Keerthana-S.pdf" target="_blank" rel="noopener noreferrer"><p class="kind">Case comment</p><h3>Mithu v. State of Punjab (1983)</h3><p>Journal of Legal Research and Juridical Sciences · ISSN (O): 2583-0066</p><p class="open">Open paper →</p></a>
+      <article class="card reveal"><p class="kind">Paper presentation</p><h3>An Empirical Study on Gender-Neutral Sexual Violence Laws and its Impact on Women’s Recognition While Advancing Towards Egalitarianism</h3><p>Global Conference on Technology, Crime and Transformative Justice for Gender Equity, Maharashtra National Law University Mumbai · 3–4 October 2025</p></article>
     </div>
   </div></section>
 
@@ -320,7 +315,7 @@
       <article class="card award reveal"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg></i><div><h3>Quarter-finalists</h3><p>10th National Moot Court Competition, KSLU Hubballi</p></div></article>
     </div>
     <div class="edu" style="margin-top:1.5rem">
-      <article class="card reveal"><h3>Certifications</h3><p>Advanced Level Certification — Learn to Protect, Secure and Maximise Your Innovations (L2PRO) IP programme</p><p style="margin-top:.7rem">Cleared CSEET — Company Secretary</p></article>
+      <article class="card reveal"><h3>Certifications</h3><p>Advanced Level Certification — Learn to Protect, Secure and Maximise Your Innovations (L2PRO) IP programme</p><p style="margin-top:.7rem">Cleared CSEET — Company Secretary</p><p style="margin-top:.7rem">Manupatra Certified Legal Research (MCLR) Certification — Skill India Digital Hub, July 2025</p><p style="margin-top:.7rem">6th Prof V.S. Mani Memorial National Essay Competition, 2025 — Gujarat National Law University. Essay: Privatisation of Space Launches and the Need for an Overarching Indian Space Law: Analysing Commercialisation, Liability, and International Obligations</p></article>
       <article class="card reveal"><h3>Patent & leadership</h3><p>AI Enabled Multilingual Translation and Cultural Context Device for Real-Time Diplomatic Connection (filed).</p><p style="margin-top:.7rem">YUCI Chennai — Vice President. Led organisational initiatives, coordinated cross-functional teams, and represented the chapter at regional forums.</p></article>
     </div>
   </div></section>
@@ -344,14 +339,6 @@
   <script>
     document.getElementById("tog").onclick = () => document.getElementById("links").classList.toggle("open");
     document.querySelectorAll("#links a").forEach(a => a.onclick = () => document.getElementById("links").classList.remove("open"));
-    document.getElementById("filters").onclick = (e) => {
-      const b = e.target.closest("button"); if (!b) return;
-      document.querySelectorAll("#filters button").forEach(x => x.classList.toggle("on", x === b));
-      const f = b.dataset.f;
-      document.querySelectorAll("#tl .item").forEach(el => {
-        el.style.display = f === "all" || el.dataset.c === f ? "" : "none";
-      });
-    };
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
