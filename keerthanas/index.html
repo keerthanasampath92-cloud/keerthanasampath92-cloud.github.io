@@ -14,8 +14,8 @@
       --ink: #130A0D;
       --tamarind: #3F242A;
       --plum: #523344;
-      --gold: #A67542;
-      --sand: #D19E7C;
+      --gold: #C4B07A;
+      --sand: #C9B896;
       --frappe: #D4D8A2;
       --line: #3F242A;
       --display: "Cormorant Garamond", Georgia, serif;
@@ -76,7 +76,9 @@
     @keyframes draw { from { transform: scaleX(0); } }
     .sub { max-width: 36rem; color: var(--sand); font-size: 1.05rem; }
     .school { margin-top: .45rem; font-size: .9rem; color: rgba(212,216,162,.8); }
-    .meta { display: flex; flex-direction: column; align-items: flex-start; gap: .65rem; margin: 1.4rem 0 1.6rem; color: var(--sand); font-size: .9rem; }
+    .meta { display: flex; flex-direction: column; align-items: flex-start; gap: .65rem; margin: 1.4rem 0 1.6rem; color: var(--sand); font-size: .9rem; text-align: left; }
+    .meta.hero-word.block { display: flex; }
+    .meta > span, .meta > a { display: block; width: 100%; text-align: left; }
     .meta a:hover { color: var(--frappe); }
     .hero-word.block { display: block; width: 100%; }
     .btns { display: flex; flex-wrap: wrap; gap: .7rem; }
@@ -164,6 +166,12 @@
     }
     footer a { color: var(--frappe); }
     .tog { display: none; background: none; border: 0; color: var(--frappe); font-size: 1.4rem; cursor: pointer; }
+    #view-count {
+      position: fixed; left: 1rem; bottom: 1rem; z-index: 40; margin: 0;
+      padding: .35rem .7rem; border: 1px solid rgba(196,176,122,.45);
+      background: rgba(19,10,13,.92); color: #C4B07A;
+      font-size: .75rem; letter-spacing: .08em; border-radius: 4px;
+    }
     @media (max-width: 860px) {
       .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--ink); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--line); }
       .nav-links.open { display: flex; }
@@ -356,6 +364,7 @@
     <p>© 2026 Keerthana S</p>
     <a href="#top">Back to top ↑</a>
   </footer>
+  <p id="view-count" hidden>Views</p>
 
   <script>
     document.getElementById("tog").onclick = () => document.getElementById("links").classList.toggle("open");
@@ -372,6 +381,23 @@
       entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    (function () {
+      var show = false;
+      try {
+        if (new URLSearchParams(location.search).has("views")) localStorage.setItem("ks-views", "1");
+        show = localStorage.getItem("ks-views") === "1";
+      } catch (e) {}
+      fetch("https://abacus.jasoncameron.dev/hit/keerthana-s-law/views")
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (!show || typeof d.value !== "number") return;
+          var el = document.getElementById("view-count");
+          if (!el) return;
+          el.hidden = false;
+          el.textContent = "Views " + d.value;
+        })
+        .catch(function () {});
+    })();
   </script>
 </body>
 </html>
